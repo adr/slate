@@ -2,3 +2,11 @@
 ---
 
 @import "jekyll-theme-slate";
+body { margin:0; padding:0; }
+#header_wrap {
+    position : fixed;
+    top: 0;
+}
+#main_content_wrap {
+    padding-top: 200px;
+}
