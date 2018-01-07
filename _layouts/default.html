@@ -58,5 +58,12 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    {% if site.anchors %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.js"></script>
+        <script>
+        anchors.options.placement = 'left';
+        anchors.add();
+        </script>
+    {% endif %}
   </body>
 </html>
