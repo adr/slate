@@ -2,13 +2,28 @@
 ---
 
 @import "jekyll-theme-slate";
-#main_content_wrap h2 {
-    position: sticky;
-    z-index: 1;
-    top: 0px;
-    background: #f2f2f2;
-    margin-left: -10px;
-    margin-right: -500px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+/*
+enable sticky H2 headers that keep at the top of the windows when scrolling,
+but only if the screen is at least 500px wide as headings might otherwise wrap
+to two lines and might cause ugly overlapping effects.
+
+For headings that wrap even with 500px layout, add the class 'long' to them
+to avoid the stickiness:
+
+    {: .long}
+    ## This is a very long title that would wrap even with 500 px width
+
+*/
+@media only screen and (min-width: 500px) {
+    #main_content_wrap h2:not(.long) {
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        background: #f2f2f2;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
