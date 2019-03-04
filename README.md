@@ -15,6 +15,13 @@ Add the following to your site's `_config.yml`:
 theme: adr/slate
 ```
 
+For headings that wrap even with 500px layout, add the class 'long' to them:
+
+```markdown
+{: .long}
+## This is a very long title that would wrap even with 500 px width
+```
+
 ## Customizing
 
 ### Configuration variables
