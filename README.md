@@ -12,7 +12,7 @@ To use the ADR Slate theme:
 Add the following to your site's `_config.yml`:
 
 ```yml
-theme: adr/slate
+remote_theme: adr/slate
 ```
 
 For headings that wrap even with 500px layout, add the class 'long' to them:
